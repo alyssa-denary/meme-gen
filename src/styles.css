@@ -5,5 +5,7 @@
 @import "base/_base.css";
 @import "base/_typography.css";
 
+@import "components/_button.css";
+
 @import "layout/_display-memes.css";
 @import "layout/_form.css";

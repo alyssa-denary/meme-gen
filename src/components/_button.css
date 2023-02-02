@@ -1,0 +1,6 @@
+.meme-form-button {
+  width: 10rem;
+  align-self: flex-end;
+  padding: .5rem;
+  background-color: var(--white);
+}
