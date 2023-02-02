@@ -1,0 +1,31 @@
+{
+  "name": "meme-gen",
+  "version": "1.0.0",
+  "description": "meme-generator",
+  "main": "memegen.js",
+  "scripts": {
+    "postcss:watch": "postcss src/styles.css --dir public --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alyssa-denary/meme-gen.git"
+  },
+  "keywords": [
+    "meme"
+  ],
+  "author": "Alyssa Denary",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alyssa-denary/meme-gen/issues"
+  },
+  "homepage": "https://github.com/alyssa-denary/meme-gen#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "cssnano": "^5.1.14",
+    "postcss-custom-media": "^9.1.1",
+    "postcss-import": "^15.1.0",
+    "postcss-media-minmax": "^5.0.0",
+    "postcss-nested": "^6.0.0",
+    "postcss-preset-env": "^8.0.1"
+  }
+}
