@@ -1,1 +1,1 @@
-:root{--background-color:rgba(86,148,219,.9)}*,:after,:before{box-sizing:inherit;margin:0;padding:0}html{font-size:62.5%}body{box-sizing:border-box;height:100vh}
+:root{--background-color:rgba(86,148,219,.9)}*,:after,:before{box-sizing:inherit;margin:0;padding:0}html{font-size:62.5%}body{box-sizing:border-box;height:100vh}.label{font-size:2rem}.meme-form{display:flex;flex-direction:column;gap:1rem;padding:2rem}.label{align-items:center;display:flex;justify-content:space-between}.input{margin-left:5rem;padding:.5rem;width:80%}
