@@ -7,5 +7,6 @@
 
 @import "components/_button.css";
 
+@import "layout/_heading.css";
 @import "layout/_display-memes.css";
 @import "layout/_form.css";
