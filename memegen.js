@@ -1,4 +1,5 @@
 // when form submitted
+  // extract user submitted url
   // create div with class (?) to hold meme image
   // create img with class (?)
   // fetch image from url
