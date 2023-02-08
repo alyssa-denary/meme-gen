@@ -1,7 +1,4 @@
-.img-container {
-  background-color: aqua;
-}
-
-.meme-img {
-  width: 20rem;
+#display-memes {
+  display: flex;
+  gap: 2rem;
 }
