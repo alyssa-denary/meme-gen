@@ -30,6 +30,7 @@ const bottomTextEl = document.querySelector("#bottom-text");
 const renderMeme = (url, topText, bottomText) => {
   // create div with class (?) to hold meme image
   const container = document.createElement("section");
+  container.className = "img-container";
   container.textContent = "i'm a container";
   document.querySelector("#display-memes").appendChild(container);
   console.log(container);
