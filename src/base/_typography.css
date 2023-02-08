@@ -10,3 +10,9 @@
   font-size: 2rem;
 }
 
+.meme-text {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 3rem;
+  color: var(--white);
+  border: 1px solid var(--black);
+}
