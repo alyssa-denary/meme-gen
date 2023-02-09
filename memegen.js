@@ -31,25 +31,26 @@ const bottomTextEl = document.querySelector("#bottom-text");
 const renderMeme = (url, topText, bottomText) => {
   // create div with class (?) to hold meme image
   const container = document.createElement("section");
-  container.width = 450;
-  container.height = 450;
-  container.style.backgroundImage = `url('${url}')`;
-  container.style.backgroundRepeat = "no-repeat";
-  container.style.backgroundSize = "450px 450px";
-  container.style.display = "flex";
-  container.style.flexDirection = "column";
-  container.style.justifyContent = "space-between";
-  container.style.alignItems = "center";
-  console.log(container);
+  container.style.margin = "2rem";
+  container.style.position = "relative";
+  // container.style.width = "450px";
+  // container.style.height = "450px";
+  // container.style.backgroundImage = `url('${url}')`;
+  // container.style.backgroundRepeat = "no-repeat";
+  // container.style.backgroundSize = "450px 450px";
+  container.style.display = "inline-flex";
+  // container.style.flexDirection = "column";
+  // container.style.justifyContent = "space-between";
+  // container.style.alignItems = "center";
 
-  // create img with class (?)
-  // const image = document.createElement("img");
-  // image.className = "meme-img";
+  // create img
+  const image = document.createElement("img");
   // add img url to img src
-  // image.src = url;
-  // image.width = 450;
+  image.src = url;
+  image.style.minWidth = "450px";
+  image.style.borderRadius = "5px";
   // attach img inside div
-  // container.appendChild(image);
+  container.appendChild(image);
 
   // display top text
   const textTop = document.createElement("p");
@@ -58,8 +59,14 @@ const renderMeme = (url, topText, bottomText) => {
     "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif";
   textTop.style.fontSize = "3rem";
   textTop.style.color = "rgb(250, 250, 250)";
-  textTop.style.textShadow = "0px 0px rgb(0, 0, 0)";
+  textTop.style.textShadow = "0px 0px 5px rgb(0, 0, 0)";
   container.appendChild(textTop);
+  // postiion top text
+  textTop.style.textAlign = "center";
+  textTop.style.position = "absolute";
+  textTop.style.top = "5px";
+  textTop.style.left = "0px";
+  textTop.style.right = "0px";
   // display bottom text
   const textBottom = document.createElement("p");
   textBottom.textContent = bottomText;
@@ -69,6 +76,12 @@ const renderMeme = (url, topText, bottomText) => {
   textBottom.style.color = "rgb(250, 250, 250)";
   textBottom.style.textShadow = "0px 0px rgb(0, 0, 0)";
   container.appendChild(textBottom);
+  // position bottom text
+  textBottom.style.textAlign = "center";
+  textBottom.style.position = "absolute";
+  textBottom.style.bottom = "5px";
+  textBottom.style.left = "0px";
+  textBottom.style.right = "0px";
   // display container in DOM
   document.querySelector("#display-memes").appendChild(container);
   // Store in localStorage
@@ -82,9 +95,10 @@ document.querySelector(".meme-form-button").addEventListener("click", (e) => {
   // render image
   renderMeme(urlEl.value, topTextEl.value, bottomTextEl.value);
   // reset form values
-  urlEl.value = "";
-  topTextEl.value = "";
-  bottomTextEl.value = "";
+
+  // urlEl.value = "";
+  // topTextEl.value = "";
+  // bottomTextEl.value = "";
 });
 
 // listen for click on image to remove from DOM
