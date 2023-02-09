@@ -48,31 +48,29 @@ function renderMeme(url, topText, bottomText) {
 }
 
 // Function create id
-function createID () {
-  const usedIds = [];
+function createID(usedIds) {
   // randomly gen num btween 1 - 1 mil
+  let min = 1;
+  let max = 1000000;
+  let randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
   // check if num is in usedIDs
-    // if not, push num into used IDs
-    // return num
-    // else, return createID();
+  // if not, push num into used IDs
+  // return num
+  // else, return createID();
 }
 
 // Create new meme
-function newMeme(id, url, topText, bottomText) {
-
-}
+function newMeme(id, url, topText, bottomText) {}
 
 // Store in localStorage function
-function saveMemes(memes) {
-  localStorage.setItem("memes", JSON.stringify(memes));
+function store(key) {
+  localStorage.setItem(`${key}`, JSON.stringify(key));
 }
 
 // Retrieve from localStorage function
-function getMemes() {
-  const memesJSON = localStorage.getItem("memes");
-  return memesJSON !== null ? JSON.parse(memesJSON) : [];
+function retrieve(key) {
+  const objJSON = localStorage.getItem(`${key}`);
+  return objJSON !== null ? JSON.parse(objJSON) : [];
 }
 
 // Function to remove from dom
-
-

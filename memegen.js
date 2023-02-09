@@ -1,6 +1,8 @@
 const urlEl = document.querySelector("#img-url");
 const topTextEl = document.querySelector("#top-text");
 const bottomTextEl = document.querySelector("#bottom-text");
+const usedIds = retrieve(usedIds);
+const memes = retrieve(memes);
 
 /*
 // render image function:
@@ -27,7 +29,6 @@ const bottomTextEl = document.querySelector("#bottom-text");
 
 // listen for click on image to remove from DOM
 */
-
 
 // when form submitted
 document.querySelector(".meme-form-button").addEventListener("click", (e) => {
