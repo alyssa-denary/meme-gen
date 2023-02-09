@@ -17,9 +17,9 @@ document.querySelector(".meme-form-button").addEventListener("click", (e) => {
     bottomTextEl.value
   );
   renderMeme(newMeme);
-  // urlEl.value = "";
-  // topTextEl.value = "";
-  // bottomTextEl.value = "";
+  urlEl.value = "";
+  topTextEl.value = "";
+  bottomTextEl.value = "";
 });
 
 // listen for click on image to remove from DOM
