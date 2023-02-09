@@ -1,18 +1,9 @@
 const renderMeme = (url, topText, bottomText) => {
-  // create div with class (?) to hold meme image
+  // create div to hold meme image
   const container = document.createElement("section");
   container.style.margin = "2rem";
   container.style.position = "relative";
   container.style.display = "inline-flex";
-  // container.style.width = "450px";
-  // container.style.height = "450px";
-  // container.style.backgroundImage = `url('${url}')`;
-  // container.style.backgroundRepeat = "no-repeat";
-  // container.style.backgroundSize = "450px 450px";
-  // container.style.flexDirection = "column";
-  // container.style.justifyContent = "space-between";
-  // container.style.alignItems = "center";
-
   // style & display img
   const image = document.createElement("img");
   image.src = url;
@@ -53,3 +44,9 @@ const renderMeme = (url, topText, bottomText) => {
   document.querySelector("#display-memes").appendChild(container);
   // Store in localStorage
 };
+
+// Store in localStorage function
+
+// Retrieve from localStorage function
+
+// Function to remove from dom
