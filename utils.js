@@ -1,4 +1,6 @@
-const renderMeme = (url, topText, bottomText) => {
+"use strict";
+
+function renderMeme(url, topText, bottomText) {
   // create div to hold meme image
   const container = document.createElement("section");
   container.style.margin = "2rem";
@@ -43,10 +45,34 @@ const renderMeme = (url, topText, bottomText) => {
   // display container in DOM
   document.querySelector("#display-memes").appendChild(container);
   // Store in localStorage
-};
+}
+
+// Function create id
+function createID () {
+  const usedIds = [];
+  // randomly gen num btween 1 - 1 mil
+  // check if num is in usedIDs
+    // if not, push num into used IDs
+    // return num
+    // else, return createID();
+}
+
+// Create new meme
+function newMeme(id, url, topText, bottomText) {
+
+}
 
 // Store in localStorage function
+function saveMemes(memes) {
+  localStorage.setItem("memes", JSON.stringify(memes));
+}
 
 // Retrieve from localStorage function
+function getMemes() {
+  const memesJSON = localStorage.getItem("memes");
+  return memesJSON !== null ? JSON.parse(memesJSON) : [];
+}
 
 // Function to remove from dom
+
+
