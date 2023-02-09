@@ -33,26 +33,23 @@ const renderMeme = (url, topText, bottomText) => {
   const container = document.createElement("section");
   container.style.margin = "2rem";
   container.style.position = "relative";
+  container.style.display = "inline-flex";
   // container.style.width = "450px";
   // container.style.height = "450px";
   // container.style.backgroundImage = `url('${url}')`;
   // container.style.backgroundRepeat = "no-repeat";
   // container.style.backgroundSize = "450px 450px";
-  container.style.display = "inline-flex";
   // container.style.flexDirection = "column";
   // container.style.justifyContent = "space-between";
   // container.style.alignItems = "center";
 
-  // create img
+  // style & display img
   const image = document.createElement("img");
-  // add img url to img src
   image.src = url;
   image.style.minWidth = "450px";
   image.style.borderRadius = "5px";
-  // attach img inside div
   container.appendChild(image);
-
-  // display top text
+  // style & display top text
   const textTop = document.createElement("p");
   textTop.textContent = topText;
   textTop.style.fontFamily =
@@ -67,7 +64,7 @@ const renderMeme = (url, topText, bottomText) => {
   textTop.style.top = "5px";
   textTop.style.left = "0px";
   textTop.style.right = "0px";
-  // display bottom text
+  // style & display bottom text
   const textBottom = document.createElement("p");
   textBottom.textContent = bottomText;
   textBottom.style.fontFamily =
@@ -89,13 +86,9 @@ const renderMeme = (url, topText, bottomText) => {
 
 // when form submitted
 document.querySelector(".meme-form-button").addEventListener("click", (e) => {
-  // disable auto refresh
   e.preventDefault();
-  // extract user submitted url
-  // render image
   renderMeme(urlEl.value, topTextEl.value, bottomTextEl.value);
   // reset form values
-
   // urlEl.value = "";
   // topTextEl.value = "";
   // bottomTextEl.value = "";
