@@ -1,6 +1,6 @@
 "use strict";
 
-function renderMeme(url, topText, bottomText) {
+function renderMeme(obj) {
   // create div to hold meme image
   const container = document.createElement("section");
   container.style.margin = "2rem";
@@ -8,13 +8,13 @@ function renderMeme(url, topText, bottomText) {
   container.style.display = "inline-flex";
   // style & display img
   const image = document.createElement("img");
-  image.src = url;
+  image.src = obj.url;
   image.style.minWidth = "450px";
   image.style.borderRadius = "5px";
   container.appendChild(image);
   // style & display top text
   const textTop = document.createElement("p");
-  textTop.textContent = topText;
+  textTop.textContent = obj.topText;
   textTop.style.fontFamily =
     "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif";
   textTop.style.fontSize = "3rem";
@@ -29,7 +29,7 @@ function renderMeme(url, topText, bottomText) {
   textTop.style.right = "0px";
   // style & display bottom text
   const textBottom = document.createElement("p");
-  textBottom.textContent = bottomText;
+  textBottom.textContent = obj.bottomText;
   textBottom.style.fontFamily =
     "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif";
   textBottom.style.fontSize = "3rem";
@@ -44,7 +44,6 @@ function renderMeme(url, topText, bottomText) {
   textBottom.style.right = "0px";
   // display container in DOM
   document.querySelector("#display-memes").appendChild(container);
-  // Store in localStorage
 }
 
 // Function create id
@@ -61,11 +60,21 @@ function createID(usedIds) {
 }
 
 // Create new meme
-function newMeme(id, url, topText, bottomText) {}
+function createMeme(usedIds, memes, url, topText, bottomText) {
+  const meme = {
+    id: createID(usedIds),
+    url: url,
+    topText: topText,
+    bottomText: bottomText,
+  };
+  memes.push(meme);
+  store("memes", memes);
+  return meme;
+}
 
 // Store in localStorage function
-function store(key) {
-  localStorage.setItem(`${key}`, JSON.stringify(key));
+function store(key, obj) {
+  localStorage.setItem(`${key}`, JSON.stringify(obj));
 }
 
 // Retrieve from localStorage function
