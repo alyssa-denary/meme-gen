@@ -49,14 +49,15 @@ function renderMeme(url, topText, bottomText) {
 
 // Function create id
 function createID(usedIds) {
-  // randomly gen num btween 1 - 1 mil
   let min = 1;
   let max = 1000000;
   let randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
-  // check if num is in usedIDs
-  // if not, push num into used IDs
-  // return num
-  // else, return createID();
+  if (!usedIds.includes(randomNum)) {
+    usedIds.push(randomNum);
+    return randomNum;
+  } else {
+    return createID(usedIds);
+  }
 }
 
 // Create new meme
