@@ -1,8 +1,9 @@
 const urlEl = document.querySelector("#img-url");
 const topTextEl = document.querySelector("#top-text");
 const bottomTextEl = document.querySelector("#bottom-text");
-const usedIds = retrieve(usedIds);
-const memes = retrieve(memes);
+//const usedIds = retrieve(usedIds);
+const usedIds = [];
+const memes = retrieve("memes");
 
 /*
 // render image function:
@@ -33,7 +34,15 @@ const memes = retrieve(memes);
 // when form submitted
 document.querySelector(".meme-form-button").addEventListener("click", (e) => {
   e.preventDefault();
-  renderMeme(urlEl.value, topTextEl.value, bottomTextEl.value);
+  const newMeme = createMeme(
+    usedIds,
+    memes,
+    urlEl.value,
+    topTextEl.value,
+    bottomTextEl.value
+  );
+  console.log(newMeme);
+  renderMeme(newMeme);
   // reset form values
   // urlEl.value = "";
   // topTextEl.value = "";
