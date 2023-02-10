@@ -22,4 +22,3 @@ document.querySelector(".meme-form-button").addEventListener("click", (e) => {
   bottomTextEl.value = "";
 });
 
-// listen for click on image to remove from DOM
