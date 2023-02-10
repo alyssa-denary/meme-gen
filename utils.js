@@ -54,6 +54,9 @@ function renderMeme(obj) {
   deleteButton.style.fontSize = "12rem";
   deleteButton.style.fontWeight = "800";
   deleteButton.style.visibility = "hidden";
+  deleteButton.addEventListener("click", (e) => {
+    removeMeme(obj.id, container);
+  });
   container.appendChild(deleteButton);
   // Event listeners to show/hide deleteButton
   container.addEventListener("mouseenter", (e) => {
@@ -98,4 +101,11 @@ function retrieve(key) {
 }
 
 // Function to remove from dom
-function removeMeme(id, memes) {}
+function removeMeme(id, element) {
+  const targetIndex = memes.findIndex((obj) => obj.id === id);
+  if (targetIndex !== -1) {
+    memes.splice(targetIndex, 1);
+  }
+  store("memes", memes);
+  element.remove();
+}
