@@ -13,7 +13,7 @@ function renderMeme(obj) {
   image.style.minWidth = "45rem";
   image.style.maxWidth = "70rem";
   image.style.maxHeight = "70rem";
-  image.style.borderRadius = "5px";
+  image.style.borderRadius = ".5rem";
   container.appendChild(image);
   // Top text creation & styling
   const textTop = document.createElement("p");
@@ -22,12 +22,12 @@ function renderMeme(obj) {
     "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif";
   textTop.style.fontSize = "3rem";
   textTop.style.color = "rgb(250, 250, 250)";
-  textTop.style.textShadow = "0px 0px 5px rgb(0, 0, 0)";
+  textTop.style.textShadow = "0 0 .5rem rgb(0, 0, 0)";
   textTop.style.textAlign = "center";
   textTop.style.position = "absolute";
-  textTop.style.top = "5px";
-  textTop.style.left = "0px";
-  textTop.style.right = "0px";
+  textTop.style.top = ".5rem";
+  textTop.style.left = "0";
+  textTop.style.right = "0";
   container.appendChild(textTop);
   // Bottom text creation & styling
   const textBottom = document.createElement("p");
@@ -36,12 +36,12 @@ function renderMeme(obj) {
     "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif";
   textBottom.style.fontSize = "3rem";
   textBottom.style.color = "rgb(250, 250, 250)";
-  textBottom.style.textShadow = "0px 0px rgb(0, 0, 0)";
+  textBottom.style.textShadow = "0 0 .5rem rgb(0, 0, 0)";
   textBottom.style.textAlign = "center";
   textBottom.style.position = "absolute";
-  textBottom.style.bottom = "5px";
-  textBottom.style.left = "0px";
-  textBottom.style.right = "0px";
+  textBottom.style.bottom = ".5rem";
+  textBottom.style.left = "0";
+  textBottom.style.right = "0";
   container.appendChild(textBottom);
   // Remove button creation & styling
   const deleteButton = document.createElement("button");
@@ -50,7 +50,7 @@ function renderMeme(obj) {
   deleteButton.style.width = "100%";
   deleteButton.style.height = "100%";
   deleteButton.style.border = "none";
-  deleteButton.style.borderRadius = "5px";
+  deleteButton.style.borderRadius = ".5rem";
   deleteButton.style.backgroundColor = "rgba(14, 13, 13, 0.6)";
   deleteButton.style.color = "rgba(167, 163, 163, 0.6)";
   deleteButton.style.fontSize = "12rem";
