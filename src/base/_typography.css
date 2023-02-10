@@ -1,3 +1,7 @@
+body {
+  color: var(--black);
+}
+
 .main-heading {
   font-size: 3.5rem;
 }
@@ -9,5 +13,3 @@
 .label {
   font-size: 2rem;
 }
-
-
