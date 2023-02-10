@@ -41,6 +41,27 @@ function renderMeme(obj) {
   textBottom.style.left = "0px";
   textBottom.style.right = "0px";
   container.appendChild(textBottom);
+  // Remove button creation & styling
+  const deleteButton = document.createElement("button");
+  deleteButton.textContent = "X";
+  deleteButton.style.position = "absolute";
+  deleteButton.style.width = "100%";
+  deleteButton.style.height = "100%";
+  deleteButton.style.border = "none";
+  deleteButton.style.borderRadius = "5px";
+  deleteButton.style.backgroundColor = "rgba(14, 13, 13, 0.6)";
+  deleteButton.style.color = "rgba(167, 163, 163, 0.6)";
+  deleteButton.style.fontSize = "12rem";
+  deleteButton.style.fontWeight = "800";
+  deleteButton.style.visibility = "hidden";
+  container.appendChild(deleteButton);
+  // Event listeners to show/hide deleteButton
+  container.addEventListener("mouseenter", (e) => {
+    deleteButton.style.visibility = "visible";
+  });
+  container.addEventListener("mouseleave", (e) => {
+    deleteButton.style.visibility = "hidden";
+  });
 }
 
 function createID(usedIds) {
@@ -77,3 +98,4 @@ function retrieve(key) {
 }
 
 // Function to remove from dom
+function removeMeme(id, memes) {}
