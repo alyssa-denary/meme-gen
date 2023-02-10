@@ -7,7 +7,7 @@ const memes = retrieve("memes");
 memes.forEach((meme) => renderMeme(meme));
 
 // Form submission
-document.querySelector(".meme-form-button").addEventListener("click", (e) => {
+document.querySelector(".meme-form").addEventListener("submit", (e) => {
   e.preventDefault();
   const newMeme = createMeme(
     usedIds,
@@ -21,4 +21,3 @@ document.querySelector(".meme-form-button").addEventListener("click", (e) => {
   topTextEl.value = "";
   bottomTextEl.value = "";
 });
-
