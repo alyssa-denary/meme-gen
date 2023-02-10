@@ -10,7 +10,9 @@ function renderMeme(obj) {
   // Image creation & styling
   const image = document.createElement("img");
   image.src = obj.url;
-  image.style.minWidth = "450px";
+  image.style.minWidth = "45rem";
+  image.style.maxWidth = "70rem";
+  image.style.maxHeight = "70rem";
   image.style.borderRadius = "5px";
   container.appendChild(image);
   // Top text creation & styling
