@@ -12,7 +12,7 @@ function renderMeme(obj) {
   image.src = obj.url;
   image.style.minWidth = "45rem";
   image.style.maxWidth = "70rem";
-  image.style.maxHeight = "70rem";
+  image.style.maxHeight = "55rem";
   image.style.borderRadius = ".5rem";
   container.appendChild(image);
   // Top text creation & styling
