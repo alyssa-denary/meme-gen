@@ -1,5 +1,5 @@
 :root {
-  --background-color: rgba(86, 148, 219, 0.9); // Header background
-  --white: rgb(234, 236, 238); // Button background
-  --black: rgb(0, 0, 0); // Main font
+  --background-color: rgba(86, 148, 219, 0.9); /* Header background */
+  --white: rgb(234, 236, 238); /* Button background */
+  --black: rgb(0, 0, 0); /* Main font */
 }

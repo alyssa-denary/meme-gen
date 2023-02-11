@@ -1,1 +1,80 @@
-:root{--background-color:rgba(86,148,219,.9);--white:#eaecee}*,:after,:before{box-sizing:inherit;margin:0;padding:0}html{font-size:62.5%}body{box-sizing:border-box;height:100vh}.main-heading{font-size:3.5rem}.subheading{font-size:1.5rem}.label{font-size:2rem}.meme-form-button{align-self:flex-end;background-color:#eaecee;background-color:var(--white);padding:.5rem;width:10rem}.header{align-items:center;justify-content:space-around;min-height:9rem;padding:1rem}.header,.meme-form{background-color:rgba(86,148,219,.9);background-color:var(--background-color);display:flex;flex-direction:column}.meme-form{gap:1rem;padding:2rem}.label{align-items:center;display:flex;justify-content:space-between}.input{margin-left:5rem;padding:.5rem;width:80%}
+:root {
+  --background-color: rgba(86, 148, 219, 0.9); /* Header background */
+  --white: rgb(234, 236, 238); /* Button background */
+  --black: rgb(0, 0, 0); /* Main font */
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; /* 1 rem size: 10px */
+}
+
+body {
+  box-sizing: border-box;
+  height: 100vh;
+  overflow: scroll;
+}
+
+body {
+  color: rgb(0, 0, 0);
+  color: var(--black);
+}
+
+.main-heading {
+  font-size: 3.5rem;
+}
+
+.subheading {
+  font-size: 1.5rem;
+}
+
+.label {
+  font-size: 2rem;
+}
+
+.meme-form-button {
+  width: 10rem;
+  align-self: flex-end;
+  padding: .5rem;
+  background-color: rgb(234, 236, 238);
+  background-color: var(--white);
+}
+
+.header {
+  min-height: 9rem;
+  background-color: rgba(86, 148, 219, 0.9);
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+}
+
+.meme-form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1rem;
+  background-color: rgba(86, 148, 219, 0.9);
+  background-color: var(--background-color);
+}
+
+.label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input {
+  width: 80%;
+  padding: .5rem;
+  margin-left: 5rem;
+}
